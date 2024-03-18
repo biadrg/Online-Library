@@ -1,0 +1,329 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600&display=swap");
+ 
+/* Resetting default styles for a consistent look */
+ * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Using Google Fonts for Raleway, already imported in HTML */
+body {
+	font-family: 'Raleway', sans-serif;
+	background-color: #333;
+}
+
+
+.err{
+	margin: 20px 0 0px;
+	border-radius: 5px;
+	padding: 7px;
+	background-color: #333; /* Dark background for the button */
+	color: yellow;
+}
+
+.ok{
+	margin: 20px 0 0px;
+	border-radius: 5px;
+	padding: 7px;
+	background-color: #333; /* Dark background for the button */
+	color: rgb(149, 255, 149);
+}
+
+/* Header styles */
+.header nav {
+	background-color: #333; /* Dark background for the navbar */
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+
+
+/* Extend the background image to take the full remaining height */
+html, body {
+	height: 100%;
+}
+
+/* Navigation links */
+.nav-links ul {
+	list-style-type: none;
+	display: flex;
+
+	justify-content: space-between;
+	width: 100%;
+}
+
+.nav-links ul li{
+	padding: 0 15px;
+}
+
+.nav-links ul li a{
+	text-decoration: none;
+	color: white; 
+	text-transform: uppercase; 
+}
+
+.main-content h3 a{
+	text-decoration: none;
+	color: yellow; 
+}
+
+
+
+/* Main content styles */
+.main-content {
+	min-height: calc(100% - (80px + 1em * 2)); /* Adjust the 60px if your header and footer have different heights */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-attachment: fixed; /* Keep the background fixed during scroll */
+
+	background-image: linear-gradient(
+        rgba(0, 0, 0, 0.4), /* Adjust the opacity as needed */
+        rgba(0, 0, 0, 0.4)
+    ), url('../img/bg2.jpg');
+	background-size: cover;
+	padding: 50px; 
+	text-align: center; 
+}
+
+/* Gray background for the welcome text */
+.main-content > .grid > .content > hgroup {
+	/* background-color: #333; */
+	background-color: rgba(255, 255, 255, 0.10);
+	padding: 20px;
+	border-radius: 10px; /* Rounded corners */
+	display: inline-block;
+}
+
+.main-content h2,
+.main-content h3 {
+	font-size: larger; /* Make the text larger */
+	color: white; /* Keep text color white for contrast */
+}
+
+
+/* Styles for the login section */
+.main-content > .grid > .content > .login, .signup {
+	background-color: rgba(255, 255, 255, 0.10);/* Light background with some opacity */
+	border-radius: 10px; /* Rounded corners */
+	padding: 20px;
+	margin-top: 20px; /* Add space between the welcome text and the form */
+}
+
+
+.column {
+	float: left;
+	width: 50%;
+	padding: 20px;
+  }
+
+
+/* Style for the login form inputs and button */
+form {
+	display: grid;
+	gap: 10px;
+	justify-items: start;
+}
+
+form label {
+	color: white;
+	/* font-weight: bold; */
+	/* padding-bottom: 20px; */
+}
+
+form input[type="text"],
+form input[type="password"] {
+	border: none;
+	border-radius: 5px; /* Rounded corners for inputs */
+	padding: 10px;
+	margin-top: 10px;
+	width: 100%; /* Full width */
+}
+
+textarea{
+	width: 100%;
+	height: 100px;
+}
+
+form button {
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	background-color: #333; /* Dark background for the button */
+	color: white; /* White text for the button */
+	cursor: pointer;
+	width: 100%; /* Full width */
+}
+
+button {
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	background-color: #333; /* Dark background for the button */
+	color: white; /* White text for the button */
+	cursor: pointer;
+	width: 100%; /* Full width */
+}
+
+.search-bar{
+	display: flex;
+	align-items: center;
+}
+
+.search-bar ul{
+	width: 500px;
+}
+
+.search-bar ul li{
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+}
+
+.search-bar input{
+	width: 100%;
+	padding: 1.0em;
+	border: none;
+	border-radius: 5px;
+}
+
+
+.search-bar button{
+	vertical-align: bottom;
+	font-size: 30px;
+	width: 0px;
+	padding: 0px;
+	margin: 8px 0px 0px 0px;
+}
+
+.search-bar button p{
+	width: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+
+table{
+	background-color: rgba(255, 255, 255, 0.10);
+	border-radius: 10px; 
+	padding: 20px;
+	margin-top: 20px;
+	color: white;
+	width: 100%;
+	margin: 0;
+}
+
+.td-cell{
+	padding: 5px;
+}
+
+.th-cell{
+	padding-top:0px;
+}
+
+
+
+/* Styles for the book containers */
+.book-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.book-container {
+    width: calc(50% - 40px); /* Adjust the width as necessary */
+    margin: 20px auto; /* Top and bottom margins are 20px, left and right are auto */
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box; /* Ensures padding and border are included in width/height */
+    color: white;
+    /* Add below styles if the div is not centered vertically and you want to center it */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.book-container a{
+	text-decoration: none;
+	color: yellow;
+}	
+
+.review-note {
+    display: flex; /* Use flexbox to put items on the same line */
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Maintain a gap between items */
+}
+
+.review-note label {
+    color: white;
+	margin: 0;
+}
+
+
+
+.review-note input[type="number"] {
+	-webkit-appearance: textfield;
+	   -moz-appearance: textfield;
+			appearance: textfield;
+			margin: 0;
+			width: 30px;
+  }
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+}
+
+.review-note h2 {
+	margin: 0;
+}
+
+
+.user-orders {
+    margin: 20px;
+    padding: 20px;
+}
+
+.user-orders h2 {
+    margin-bottom: 15px;
+}
+
+.order-history {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order-history th,
+.order-history td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.order-history th {
+    background-color: #f2f2f2;
+}
+
+.order-history tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Footer styles */
+.footer {
+	background-color: #333; /* Dark background for the footer */
+	text-align: center;
+	padding: 10px 0px;
+	color: white;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+	.nav-links ul {
+		flex-direction: column;
+	}
+}
